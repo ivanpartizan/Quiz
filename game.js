@@ -28,11 +28,11 @@ fetch(
       };
 
       const answerChoices = [...loadedQuestion.incorrect_answers];
-      formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
+      formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
       answerChoices.splice(
         formattedQuestion.answer - 1,
         0,
-        loadedQuestions.correct_answer
+        loadedQuestion.correct_answer
       );
 
       answerChoices.forEach((choice, index) => {
